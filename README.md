@@ -16,7 +16,8 @@
     }
 
     //返回一个需要做动画的containerView,这里你也可以用storyboard拖拽一个，并关联
-        @property (weak, nonatomic) IBOutlet UIView *contentView;你可以参照例子
+        //@property (weak, nonatomic) IBOutlet UIView *contentView;你可以参照Demo
+
     - (UIView *)contentView {
         return _contentView;
     }
