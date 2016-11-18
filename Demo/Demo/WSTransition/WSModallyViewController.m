@@ -66,8 +66,8 @@
     return nil;
 }
 
-- (UIView *)contentView {
-    NSAssert(0, @"Please in WSModallyViewController WSModallyViewControllerDelegate subclass implementation, return a contentView object");
+- (UIView *)containerView {
+    NSAssert(0, @"Please in WSModallyViewController WSModallyViewControllerDelegate subclass implementation, return a containerView object");
     return nil;
 }
 

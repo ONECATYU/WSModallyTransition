@@ -19,9 +19,9 @@
 - (WSModallyAnimationController *)animationController;
 
 /**
- 返回一个做动画的contentView
+ 返回一个做动画的containerView
  */
-- (UIView *)contentView;
+- (UIView *)containerView;
 
 @end
 

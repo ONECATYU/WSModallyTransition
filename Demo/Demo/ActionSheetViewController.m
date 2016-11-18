@@ -10,7 +10,7 @@
 
 @interface ActionSheetViewController ()
 
-@property (weak, nonatomic) IBOutlet UIView *contentView;
+@property (weak, nonatomic) IBOutlet UIView *containerView;
 
 @end
 

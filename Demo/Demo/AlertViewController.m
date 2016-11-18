@@ -9,7 +9,7 @@
 #import "AlertViewController.h"
 
 @interface AlertViewController ()
-@property (weak, nonatomic) IBOutlet UIView *contentView;
+@property (weak, nonatomic) IBOutlet UIView *containerView;
 
 @end
 
@@ -17,8 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _contentView.layer.masksToBounds = YES;
-    _contentView.layer.cornerRadius = 10;
+    _containerView.layer.masksToBounds = YES;
+    _containerView.layer.cornerRadius = 10;
 }
 
 - (WSModallyAnimationController *)animationController {
