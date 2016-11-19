@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "WSModallyTransition"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "一个类似于系统alterView和actionSheet的模态弹出和消失的转场动画，可用于快速自定义alterView和actionSheet."
   s.description  = <<-DESC
                     * 一个类似于系统alterView和actionSheet的模态弹出和消失的转场动画
