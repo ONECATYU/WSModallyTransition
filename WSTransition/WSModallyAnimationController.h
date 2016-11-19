@@ -14,6 +14,13 @@ typedef NS_ENUM(NSInteger, WSModallyAnimationStyle) {
     WSModallyAnimationStyleAlert
 };
 
+typedef NS_ENUM(NSInteger, WSAnimationStartPosition) {
+    WSAnimationStartBottom,
+    WSAnimationStartLeft,
+    WSAnimationStartRight,
+    WSAnimationStartTop
+};
+
 @interface WSModallyAnimationController : NSObject
 <UIViewControllerAnimatedTransitioning>
 
@@ -21,5 +28,9 @@ typedef NS_ENUM(NSInteger, WSModallyAnimationStyle) {
 @property (nonatomic, assign) BOOL opposite;
 @property (nonatomic, assign) WSModallyAnimationStyle animationStyle;
 
+/**
+ 开始动画的位置，从哪个方向做动画（WSModallyAnimationStyleActionSheet有效）
+ */
+@property (nonatomic, assign) WSAnimationStartPosition position;
 
 @end
