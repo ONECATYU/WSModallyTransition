@@ -69,16 +69,31 @@ NSString *const WSModallyAnimatorContainerViewKey = @"containerView";
 {
     UIView *containView = transitionContext.containerView;
     __block CGRect rect = contentView.frame;
+    
+        CGPoint incremental = CGPointZero;
+        switch (_position) {
+            default:
+            case WSAnimationStartBottom:
+                incremental.y = CGRectGetHeight(containView.frame) - CGRectGetMinY(contentView.frame);
+                break;
+            case WSAnimationStartLeft:
+                incremental.x = -CGRectGetMaxX(contentView.frame);
+                break;
+            case WSAnimationStartRight:
+                incremental.x = containView.frame.size.width - rect.origin.x;
+                break;
+            case WSAnimationStartTop:
+                incremental.y = -CGRectGetMaxY(contentView.frame);
+                break;
+        }
     if (!_opposite) {
-        rect.origin.y = containView.frame.size.height;
-        contentView.frame = rect;
+        contentView.transform = CGAffineTransformTranslate(CGAffineTransformIdentity, incremental.x, incremental.y);
     }
     [UIView animateWithDuration:self.duration
                      animations:^{
                          [UIView setAnimationCurve:7];
                          destinationView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5 * (!_opposite)];
-                         rect.origin.y = containView.frame.size.height - rect.size.height + rect.size.height * _opposite;
-                         contentView.frame = rect;
+                         contentView.transform = CGAffineTransformTranslate(CGAffineTransformIdentity, _opposite * incremental.x, _opposite * incremental.y);
                      } completion:^(BOOL finished) {
                          [transitionContext completeTransition:YES];
                      }];

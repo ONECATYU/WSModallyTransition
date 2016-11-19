@@ -17,6 +17,10 @@
 		27AA29361DDC54C300B0F30E /* AlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AA292F1DDC54C300B0F30E /* AlertViewController.m */; };
 		27AA29371DDC54C300B0F30E /* WSModallyAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AA29321DDC54C300B0F30E /* WSModallyAnimationController.m */; };
 		27AA29381DDC54C300B0F30E /* WSModallyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AA29341DDC54C300B0F30E /* WSModallyViewController.m */; };
+		27AEB24E1DE0875500915B84 /* ActionLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AEB24D1DE0875500915B84 /* ActionLeftViewController.m */; };
+		27AEB2511DE0876D00915B84 /* ActionRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AEB2501DE0876D00915B84 /* ActionRightViewController.m */; };
+		27AEB2541DE0877D00915B84 /* ActionTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AEB2531DE0877D00915B84 /* ActionTopViewController.m */; };
+		27AEB2571DE0894400915B84 /* UIView+WS.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AEB2561DE0894400915B84 /* UIView+WS.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,14 @@
 		27AA29321DDC54C300B0F30E /* WSModallyAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSModallyAnimationController.m; sourceTree = "<group>"; };
 		27AA29331DDC54C300B0F30E /* WSModallyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSModallyViewController.h; sourceTree = "<group>"; };
 		27AA29341DDC54C300B0F30E /* WSModallyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSModallyViewController.m; sourceTree = "<group>"; };
+		27AEB24C1DE0875500915B84 /* ActionLeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionLeftViewController.h; sourceTree = "<group>"; };
+		27AEB24D1DE0875500915B84 /* ActionLeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionLeftViewController.m; sourceTree = "<group>"; };
+		27AEB24F1DE0876D00915B84 /* ActionRightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionRightViewController.h; sourceTree = "<group>"; };
+		27AEB2501DE0876D00915B84 /* ActionRightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionRightViewController.m; sourceTree = "<group>"; };
+		27AEB2521DE0877D00915B84 /* ActionTopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionTopViewController.h; sourceTree = "<group>"; };
+		27AEB2531DE0877D00915B84 /* ActionTopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionTopViewController.m; sourceTree = "<group>"; };
+		27AEB2551DE0894400915B84 /* UIView+WS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WS.h"; sourceTree = "<group>"; };
+		27AEB2561DE0894400915B84 /* UIView+WS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WS.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,10 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				27AA29301DDC54C300B0F30E /* WSTransition */,
-				27AA292C1DDC54C300B0F30E /* ActionSheetViewController.h */,
-				27AA292D1DDC54C300B0F30E /* ActionSheetViewController.m */,
-				27AA292E1DDC54C300B0F30E /* AlertViewController.h */,
-				27AA292F1DDC54C300B0F30E /* AlertViewController.m */,
+				27AEB25B1DE08B9F00915B84 /* category */,
+				27AEB25A1DE08B8A00915B84 /* viewController */,
 				27AA29181DDC548000B0F30E /* AppDelegate.h */,
 				27AA29191DDC548000B0F30E /* AppDelegate.m */,
 				27AA291B1DDC548000B0F30E /* ViewController.h */,
@@ -105,6 +115,48 @@
 				27AA29341DDC54C300B0F30E /* WSModallyViewController.m */,
 			);
 			path = WSTransition;
+			sourceTree = "<group>";
+		};
+		27AEB2581DE08B4800915B84 /* ActionSheetStyle */ = {
+			isa = PBXGroup;
+			children = (
+				27AA292C1DDC54C300B0F30E /* ActionSheetViewController.h */,
+				27AA292D1DDC54C300B0F30E /* ActionSheetViewController.m */,
+				27AEB24C1DE0875500915B84 /* ActionLeftViewController.h */,
+				27AEB24D1DE0875500915B84 /* ActionLeftViewController.m */,
+				27AEB24F1DE0876D00915B84 /* ActionRightViewController.h */,
+				27AEB2501DE0876D00915B84 /* ActionRightViewController.m */,
+				27AEB2521DE0877D00915B84 /* ActionTopViewController.h */,
+				27AEB2531DE0877D00915B84 /* ActionTopViewController.m */,
+			);
+			name = ActionSheetStyle;
+			sourceTree = "<group>";
+		};
+		27AEB2591DE08B7B00915B84 /* AlterStyle */ = {
+			isa = PBXGroup;
+			children = (
+				27AA292E1DDC54C300B0F30E /* AlertViewController.h */,
+				27AA292F1DDC54C300B0F30E /* AlertViewController.m */,
+			);
+			name = AlterStyle;
+			sourceTree = "<group>";
+		};
+		27AEB25A1DE08B8A00915B84 /* viewController */ = {
+			isa = PBXGroup;
+			children = (
+				27AEB2581DE08B4800915B84 /* ActionSheetStyle */,
+				27AEB2591DE08B7B00915B84 /* AlterStyle */,
+			);
+			name = viewController;
+			sourceTree = "<group>";
+		};
+		27AEB25B1DE08B9F00915B84 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				27AEB2551DE0894400915B84 /* UIView+WS.h */,
+				27AEB2561DE0894400915B84 /* UIView+WS.m */,
+			);
+			name = category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,13 +230,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27AEB2541DE0877D00915B84 /* ActionTopViewController.m in Sources */,
 				27AA29351DDC54C300B0F30E /* ActionSheetViewController.m in Sources */,
 				27AA29371DDC54C300B0F30E /* WSModallyAnimationController.m in Sources */,
 				27AA29361DDC54C300B0F30E /* AlertViewController.m in Sources */,
 				27AA291D1DDC548000B0F30E /* ViewController.m in Sources */,
 				27AA291A1DDC548000B0F30E /* AppDelegate.m in Sources */,
+				27AEB2511DE0876D00915B84 /* ActionRightViewController.m in Sources */,
+				27AEB24E1DE0875500915B84 /* ActionLeftViewController.m in Sources */,
 				27AA29171DDC548000B0F30E /* main.m in Sources */,
 				27AA29381DDC54C300B0F30E /* WSModallyViewController.m in Sources */,
+				27AEB2571DE0894400915B84 /* UIView+WS.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +397,7 @@
 				27AA292B1DDC548100B0F30E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
