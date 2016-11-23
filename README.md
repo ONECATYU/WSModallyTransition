@@ -3,6 +3,9 @@
 * 一个类似于系统alterView和actionSheet的模态弹出和消失的转场动画
 * 可用于快速自定义alterView和actionSheet
 
+
+    ![](https://github.com/ONECATYU/WSModallyTransition/raw/master/demo.gif)
+
 ## Usage
 
 1. 申明一个类，继承WSModallyViewController。
