@@ -12,6 +12,15 @@ NSString *const WSModallyAnimatorContainerViewKey = @"containerView";
 
 @implementation WSModallyAnimationController
 
+- (instancetype)init
+{
+    if (self = [super init]) {
+        _duration = 0.25;
+        _finalAlpha = 0.5;
+    }
+    return self;
+}
+
 - (NSTimeInterval)transitionDuration:(nullable id <UIViewControllerContextTransitioning>)transitionContext {
     return self.duration;
 }
@@ -92,7 +101,7 @@ NSString *const WSModallyAnimatorContainerViewKey = @"containerView";
     [UIView animateWithDuration:self.duration
                      animations:^{
                          [UIView setAnimationCurve:7];
-                         destinationView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5 * (!_opposite)];
+                         destinationView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:self.finalAlpha * (!_opposite)];
                          contentView.transform = CGAffineTransformTranslate(CGAffineTransformIdentity, _opposite * incremental.x, _opposite * incremental.y);
                      } completion:^(BOOL finished) {
                          [transitionContext completeTransition:YES];
@@ -117,7 +126,7 @@ NSString *const WSModallyAnimatorContainerViewKey = @"containerView";
     [UIView animateWithDuration:self.duration
                      animations:^{
                          [UIView setAnimationCurve:7];
-                         destinationView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5 * (!_opposite)];
+                         destinationView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:self.finalAlpha * (!_opposite)];
                          if (!_opposite) {
                              contentView.transform = CGAffineTransformMakeScale(1, 1);
                          }else{
@@ -126,13 +135,6 @@ NSString *const WSModallyAnimatorContainerViewKey = @"containerView";
                      } completion:^(BOOL finished) {
                          [transitionContext completeTransition:YES];
                      }];
-}
-
-- (NSTimeInterval)duration {
-    if (_duration <= 0) {
-        _duration = 0.25;
-    }
-    return _duration;
 }
 
 @end

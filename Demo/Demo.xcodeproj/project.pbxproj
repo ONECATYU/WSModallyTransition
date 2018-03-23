@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2740A6652064D80E0063E04B /* WSModallyContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2740A6602064D80E0063E04B /* WSModallyContainerView.m */; };
+		2740A6662064D80E0063E04B /* WSModallyAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2740A6632064D80E0063E04B /* WSModallyAnimationController.m */; };
+		2740A6672064D80E0063E04B /* WSModallyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2740A6642064D80E0063E04B /* WSModallyViewController.m */; };
 		27AA29171DDC548000B0F30E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AA29161DDC548000B0F30E /* main.m */; };
 		27AA291A1DDC548000B0F30E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AA29191DDC548000B0F30E /* AppDelegate.m */; };
 		27AA291D1DDC548000B0F30E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AA291C1DDC548000B0F30E /* ViewController.m */; };
@@ -15,8 +18,6 @@
 		27AA29251DDC548000B0F30E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27AA29231DDC548000B0F30E /* LaunchScreen.storyboard */; };
 		27AA29351DDC54C300B0F30E /* ActionSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AA292D1DDC54C300B0F30E /* ActionSheetViewController.m */; };
 		27AA29361DDC54C300B0F30E /* AlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AA292F1DDC54C300B0F30E /* AlertViewController.m */; };
-		27AA29371DDC54C300B0F30E /* WSModallyAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AA29321DDC54C300B0F30E /* WSModallyAnimationController.m */; };
-		27AA29381DDC54C300B0F30E /* WSModallyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AA29341DDC54C300B0F30E /* WSModallyViewController.m */; };
 		27AEB24E1DE0875500915B84 /* ActionLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AEB24D1DE0875500915B84 /* ActionLeftViewController.m */; };
 		27AEB2511DE0876D00915B84 /* ActionRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AEB2501DE0876D00915B84 /* ActionRightViewController.m */; };
 		27AEB2541DE0877D00915B84 /* ActionTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AEB2531DE0877D00915B84 /* ActionTopViewController.m */; };
@@ -24,6 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2740A65F2064D80E0063E04B /* WSModallyAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSModallyAnimationController.h; sourceTree = "<group>"; };
+		2740A6602064D80E0063E04B /* WSModallyContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSModallyContainerView.m; sourceTree = "<group>"; };
+		2740A6612064D80E0063E04B /* WSModallyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSModallyViewController.h; sourceTree = "<group>"; };
+		2740A6622064D80E0063E04B /* WSModallyContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSModallyContainerView.h; sourceTree = "<group>"; };
+		2740A6632064D80E0063E04B /* WSModallyAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSModallyAnimationController.m; sourceTree = "<group>"; };
+		2740A6642064D80E0063E04B /* WSModallyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSModallyViewController.m; sourceTree = "<group>"; };
 		27AA29121DDC548000B0F30E /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27AA29161DDC548000B0F30E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		27AA29181DDC548000B0F30E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -38,10 +45,6 @@
 		27AA292D1DDC54C300B0F30E /* ActionSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetViewController.m; sourceTree = "<group>"; };
 		27AA292E1DDC54C300B0F30E /* AlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewController.h; sourceTree = "<group>"; };
 		27AA292F1DDC54C300B0F30E /* AlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewController.m; sourceTree = "<group>"; };
-		27AA29311DDC54C300B0F30E /* WSModallyAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSModallyAnimationController.h; sourceTree = "<group>"; };
-		27AA29321DDC54C300B0F30E /* WSModallyAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSModallyAnimationController.m; sourceTree = "<group>"; };
-		27AA29331DDC54C300B0F30E /* WSModallyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSModallyViewController.h; sourceTree = "<group>"; };
-		27AA29341DDC54C300B0F30E /* WSModallyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSModallyViewController.m; sourceTree = "<group>"; };
 		27AEB24C1DE0875500915B84 /* ActionLeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionLeftViewController.h; sourceTree = "<group>"; };
 		27AEB24D1DE0875500915B84 /* ActionLeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionLeftViewController.m; sourceTree = "<group>"; };
 		27AEB24F1DE0876D00915B84 /* ActionRightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionRightViewController.h; sourceTree = "<group>"; };
@@ -63,6 +66,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2740A65E2064D80E0063E04B /* WSTransition */ = {
+			isa = PBXGroup;
+			children = (
+				2740A65F2064D80E0063E04B /* WSModallyAnimationController.h */,
+				2740A6632064D80E0063E04B /* WSModallyAnimationController.m */,
+				2740A6612064D80E0063E04B /* WSModallyViewController.h */,
+				2740A6642064D80E0063E04B /* WSModallyViewController.m */,
+				2740A6622064D80E0063E04B /* WSModallyContainerView.h */,
+				2740A6602064D80E0063E04B /* WSModallyContainerView.m */,
+			);
+			path = WSTransition;
+			sourceTree = "<group>";
+		};
 		27AA29091DDC548000B0F30E = {
 			isa = PBXGroup;
 			children = (
@@ -82,7 +98,7 @@
 		27AA29141DDC548000B0F30E /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				27AA29301DDC54C300B0F30E /* WSTransition */,
+				2740A65E2064D80E0063E04B /* WSTransition */,
 				27AEB25B1DE08B9F00915B84 /* category */,
 				27AEB25A1DE08B8A00915B84 /* viewController */,
 				27AA29181DDC548000B0F30E /* AppDelegate.h */,
@@ -104,17 +120,6 @@
 				27AA29161DDC548000B0F30E /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		27AA29301DDC54C300B0F30E /* WSTransition */ = {
-			isa = PBXGroup;
-			children = (
-				27AA29311DDC54C300B0F30E /* WSModallyAnimationController.h */,
-				27AA29321DDC54C300B0F30E /* WSModallyAnimationController.m */,
-				27AA29331DDC54C300B0F30E /* WSModallyViewController.h */,
-				27AA29341DDC54C300B0F30E /* WSModallyViewController.m */,
-			);
-			path = WSTransition;
 			sourceTree = "<group>";
 		};
 		27AEB2581DE08B4800915B84 /* ActionSheetStyle */ = {
@@ -232,15 +237,16 @@
 			files = (
 				27AEB2541DE0877D00915B84 /* ActionTopViewController.m in Sources */,
 				27AA29351DDC54C300B0F30E /* ActionSheetViewController.m in Sources */,
-				27AA29371DDC54C300B0F30E /* WSModallyAnimationController.m in Sources */,
 				27AA29361DDC54C300B0F30E /* AlertViewController.m in Sources */,
 				27AA291D1DDC548000B0F30E /* ViewController.m in Sources */,
 				27AA291A1DDC548000B0F30E /* AppDelegate.m in Sources */,
 				27AEB2511DE0876D00915B84 /* ActionRightViewController.m in Sources */,
 				27AEB24E1DE0875500915B84 /* ActionLeftViewController.m in Sources */,
 				27AA29171DDC548000B0F30E /* main.m in Sources */,
-				27AA29381DDC54C300B0F30E /* WSModallyViewController.m in Sources */,
+				2740A6662064D80E0063E04B /* WSModallyAnimationController.m in Sources */,
 				27AEB2571DE0894400915B84 /* UIView+WS.m in Sources */,
+				2740A6652064D80E0063E04B /* WSModallyContainerView.m in Sources */,
+				2740A6672064D80E0063E04B /* WSModallyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

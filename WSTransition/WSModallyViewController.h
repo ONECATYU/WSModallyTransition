@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "WSModallyAnimationController.h"
+#import "WSModallyContainerView.h"
+
+NS_ASSUME_NONNULL_BEGIN
 
 @protocol WSModallyViewControllerDelegate <NSObject>
 
@@ -21,7 +24,7 @@
 /**
  返回一个做动画的containerView
  */
-- (UIView *)containerView;
+- (WSModallyContainerView *)containerView;
 
 @end
 
@@ -30,6 +33,8 @@
 <UIViewControllerTransitioningDelegate,WSModallyViewControllerDelegate>
 
 @end
+
+NS_ASSUME_NONNULL_END
 
 
 

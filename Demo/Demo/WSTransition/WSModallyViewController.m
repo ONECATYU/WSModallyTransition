@@ -56,34 +56,19 @@
     return animation;
 }
 
-/**
- 实现WSModallyViewControllerDelegate协议方法
-
- @return WSModallyAnimationController 对象
- */
+#pragma mark WSModallyViewControllerDelegate
 - (WSModallyAnimationController *)animationController {
-    NSAssert(0, @"Please in WSModallyViewController WSModallyViewControllerDelegate subclass implementation, return a WSModallyAnimationController object");
+    NSAssert(0, @"****** Must be in subclasses override this method and return WSModallyAnimationController object ******");
     return nil;
 }
 
-- (UIView *)containerView {
-    NSAssert(0, @"Please in WSModallyViewController WSModallyViewControllerDelegate subclass implementation, return a containerView object");
+- (WSModallyContainerView *)containerView {
+    NSAssert(0, @"****** Must be in subclasses override this method and return WSModallyView object ******");
     return nil;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
