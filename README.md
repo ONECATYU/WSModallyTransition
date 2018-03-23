@@ -8,11 +8,11 @@
 
 ## Usage
 1.在storyboard里你可以像这样拖拽并设置好约束   
-![](https://github.com/ONECATYU/WSModallyTransition/blob/master/storyboard.png)      
-2.安全区域(safeAreaInsets)      
+![](https://github.com/ONECATYU/WSModallyTransition/blob/master/storyboard.png) <br/>
+2.安全区域(safeAreaInsets)<br/>
 在iOS 11下，会根据safeAreaInsets来调整WSModallyContainerView的subView的上下左右约束的constant，所以你不需要做额外的适配工作. 如下图，在safeAreaInsets改变时，将subView的边界距离，从原始的红色方框区域，调整到右边图中的subView区域。        
-![](https://github.com/ONECATYU/WSModallyTransition/blob/master/transform.png)           
-3.该viewController需要继承WSModallyViewController.           
+![](https://github.com/ONECATYU/WSModallyTransition/blob/master/transform.png)<br/>
+3.该viewController需要继承WSModallyViewController.<br/>
 4.在WSModallyViewController子类中实现WSModallyViewControllerDelegate中的协议方法:
 ```objective-c
     //返回一个过渡动画控制器,
