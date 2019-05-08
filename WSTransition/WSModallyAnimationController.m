@@ -73,36 +73,39 @@ NSString *const WSModallyAnimatorContainerViewKey = @"containerView";
 #pragma mark -- WSModallyAnimationStyleActionSheet
 
 - (void)actionSheetAnimationWithTransition:(id <UIViewControllerContextTransitioning>)transitionContext
-                         contentView:(UIView *)contentView
-                     destinationView:(UIView *)destinationView
+                               contentView:(UIView *)contentView
+                           destinationView:(UIView *)destinationView
 {
     UIView *containView = transitionContext.containerView;
     __block CGRect rect = contentView.frame;
     
-        CGPoint incremental = CGPointZero;
-        switch (_position) {
-            default:
-            case WSAnimationStartBottom:
-                incremental.y = CGRectGetHeight(containView.frame) - CGRectGetMinY(contentView.frame);
-                break;
-            case WSAnimationStartLeft:
-                incremental.x = -CGRectGetMaxX(contentView.frame);
-                break;
-            case WSAnimationStartRight:
-                incremental.x = containView.frame.size.width - rect.origin.x;
-                break;
-            case WSAnimationStartTop:
-                incremental.y = -CGRectGetMaxY(contentView.frame);
-                break;
-        }
+    CGPoint incremental = CGPointZero;
+    switch (_position) {
+        default:
+        case WSAnimationStartBottom:
+            incremental.y = CGRectGetHeight(containView.frame) - CGRectGetMinY(contentView.frame);
+            break;
+        case WSAnimationStartLeft:
+            incremental.x = -CGRectGetMaxX(contentView.frame);
+            break;
+        case WSAnimationStartRight:
+            incremental.x = containView.frame.size.width - rect.origin.x;
+            break;
+        case WSAnimationStartTop:
+            incremental.y = -CGRectGetMaxY(contentView.frame);
+            break;
+    }
     if (!_opposite) {
         contentView.transform = CGAffineTransformTranslate(CGAffineTransformIdentity, incremental.x, incremental.y);
     }
     [UIView animateWithDuration:self.duration
                      animations:^{
                          [UIView setAnimationCurve:7];
-                         destinationView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:self.finalAlpha * (!_opposite)];
-                         contentView.transform = CGAffineTransformTranslate(CGAffineTransformIdentity, _opposite * incremental.x, _opposite * incremental.y);
+                         destinationView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:self.finalAlpha * (!self.opposite)];
+                         contentView.transform = CGAffineTransformTranslate(CGAffineTransformIdentity, self.opposite * incremental.x, self.opposite * incremental.y);
+                         if (self.extraAnimations) {
+                             self.extraAnimations(self);
+                         }
                      } completion:^(BOOL finished) {
                          [transitionContext completeTransition:YES];
                      }];
@@ -126,11 +129,14 @@ NSString *const WSModallyAnimatorContainerViewKey = @"containerView";
     [UIView animateWithDuration:self.duration
                      animations:^{
                          [UIView setAnimationCurve:7];
-                         destinationView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:self.finalAlpha * (!_opposite)];
-                         if (!_opposite) {
+                         destinationView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:self.finalAlpha * (!self.opposite)];
+                         if (!self.opposite) {
                              contentView.transform = CGAffineTransformMakeScale(1, 1);
                          }else{
                              contentView.alpha = 0;
+                         }
+                         if (self.extraAnimations) {
+                             self.extraAnimations(self);
                          }
                      } completion:^(BOOL finished) {
                          [transitionContext completeTransition:YES];

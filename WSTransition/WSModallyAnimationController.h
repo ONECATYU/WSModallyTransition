@@ -38,6 +38,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, assign) WSAnimationStartPosition position;
 
+//如有需要,其他view可以通过该block进行同步动画
+@property (nonatomic, copy) void(^extraAnimations)(WSModallyAnimationController *animationController);
+
 @end
 
 NS_ASSUME_NONNULL_END
